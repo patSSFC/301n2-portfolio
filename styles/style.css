@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+section {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  background-color: lightblue;
+  min-height: 60px;
+}
+
+header h1 {
+  float: left;
+  margin: 15px 0 0 20px;
+}
+
+nav {
+  float: right;
+  width: 40%;
+  margin-top: 15px;
+}
+
+nav li {
+  float: left;
+  list-style-type: none;
+  margin-right: 15px;
+  padding: 10px;
+}
+
+nav li a:link, nav li a:visited {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-bottom .2s;
+}
+
+nav li a:hover, nav li a:active {
+  color: blue;
+  border-bottom: 2px solid black;
+  transition: color .2s, border-bottom .2s;
+}
+
+.project {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.project .screenshot {
+  display: inline-block;
+  float: left;
+  width: 45%;
+  margin-right: 15px;
+}
+
+.screenshot img {
+  width: 100%;
+}
+
+.description {
+  float: right;
+  width: 45%;
+  line-height: 1.5em;
+}
+
+#statements {
+  background-color: lightgrey;
+}
+
+#statement-wrap {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#statements #col1, #statements #col2 {
+  width: 45%;
+}
+
+.copy {
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.5em;
+}
+
+#col1 {
+  float: left;
+}
+
+#col2 {
+  float: right;
+}
