@@ -3,24 +3,29 @@
 var templateView = {};
 
 templateView.showTeaser = function() {
-  $('#projects article').children();
-}
+  $('#projects article').children().filter('.description:nth-of-type(n+2)').hide();
+  $('article').on('click', '.reveal-btn', function(ev) {
+    ev.preventDefault();
+    console.log(this);
+    $(this).hide().siblings().show();
+  });
+};
 
 templateView.showTabs = function() {
-  var $target = $('ul li:not(:nth-of-type(n+3))');
-  $target.on('click', function(ev) {
+  var $target = $('ul');
+  $target.on('click', '.tab', function(ev){
     ev.preventDefault();
     $clickTarget = $(ev.target).attr('href');
-    console.log($clickTarget);
     $('section').hide();
-    $($clickTarget).fadeIn();
+    $($clickTarget).fadeIn(700);
   });
-  $target.click();
+  $target.find('li:first').click();
 };
 
 
 $(
   function() {
     templateView.showTabs();
+    templateView.showTeaser();
   }
 );

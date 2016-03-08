@@ -61,9 +61,13 @@ nav li a:hover, nav li a:active {
   transition: color .2s, border-bottom .2s;
 }
 
+#projects .project:nth-child(odd) {
+  background-color: lightgrey;
+}
+
 .project {
   width: 100%;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .project .screenshot {
