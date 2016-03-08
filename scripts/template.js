@@ -25,5 +25,5 @@ $(function () {
   setLink();
 
   var $projects = $('#projects');
-  $projects.append(tohtml(new Project(proj)));
+  $projects.append((new Project(proj)).toHtml());
 });
